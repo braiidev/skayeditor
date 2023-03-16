@@ -91,14 +91,14 @@ iframe {
   background-size: var(--x2-size);
 }
 #html {
-  background-image: url("/icon/html.png");
+  background-image: url("icon/html.png");
 }
 #css {
-  background-image: url("/icon/css.png");
+  background-image: url("icon/css.png");
 }
 #js {
-  background-image: url("/icon/js.png");
+  background-image: url("icon/js.png");
 }
 #preview {
-  background-image: url("/icon/preview.png");
+  background-image: url("icon/preview.png");
 }
