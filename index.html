@@ -11,13 +11,38 @@
 </head>
 
 <body>
+    <div id="navbar">
+        <div id="title"><input type="text" id="name" placeholder="Insert title" value=""></div>
+        <div id="menu">
+            <div id="menu-btn" class="container"></div>
+            <div id="modal">
+                <div class="container">
+                    <h2>Configuration</h2>
+                </div>
+                <div class="container">
+                    <h3>Light/Dark mode</h3>
+                    <label class="switch">
+                        <input checked id="dm" type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="container">
+                    <h3>Size</h3>
+                    <label for="size">
+                        <input type="number" value="8" name="size" id="size">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id="app">
-        <div class="container"><textarea id="html"></textarea></div>
-        <div class="container"><textarea id="css"></textarea></div>
-        <div class="container"><textarea id="js"></textarea></div>
+        <div class="container"><textarea spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" id="html"></textarea></div>
+        <div class="container"><textarea spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" id="css"></textarea></div>
+        <div class="container"><textarea spellcheck="false" autocorrect="off" autocapitalize="off" translate="no" id="js"></textarea></div>
         <div class="container"><iframe id="preview"></iframe></div>
     </div>
-    <script src="main.js" type="module"></script>
+    <script src="main.js" defer></script>
+    <script src="func.js" defer></script>
 </body>
 
 </html>
