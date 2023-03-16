@@ -1,0 +1,104 @@
+:root {
+  /* Colors */
+  --font-color: #eeeeee;
+  --background-color: #191919;
+  --textarea-bg: #252525;
+  --textarea-bg-focus: #353535;
+  --textarea-bg-hover: #303030;
+  --iframe-bg: #ffffff;
+  --iframe-color: #000;
+  /* Border */
+  --border: 2px solid #555555 outset;
+  /* Default size */
+  --half-size: 4px;
+  --default-size: 8px;
+  --x2-size: 16px;
+  /* Font styles */
+  --font-default: "Monospace";
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  background-color: var(--background-color);
+  width: var(--half-size);
+  height: var(--half-size);
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--textarea-bg-hover);
+  border-radius: var(--half-size);
+}
+body {
+  height: 100vh;
+  background-color: var(--background-color);
+  overflow: hidden;
+  font-size: var(--default-size);
+  font-family: --font-default;
+}
+textarea {
+  resize: none;
+  background-color: var(--textarea-bg);
+  border: var(--border);
+  width: 100%;
+  height: 100%;
+  color: var(--font-color);
+  padding: var(--x2-size);
+}
+textarea:focus {
+  background-color: var(--textarea-bg-focus);
+  border: inherit;
+}
+textarea:hover {
+  background-color: var(--textarea-bg-hover);
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iframe-bg);
+  color: var(--iframe-color);
+}
+#app {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+}
+#app div {
+  position: inherit;
+  z-index: 10;
+}
+#app div:focus-within {
+  z-index: 15;
+}
+#app div:last-child {
+  grid-column: 2;
+  grid-row: 1/-1;
+}
+.container {
+  position: inherit;
+  z-index: inherit;
+  width: 100%;
+  height: 100%;
+  margin: 1px;
+}
+#app div > textarea,
+#app div > iframe {
+  background-position: calc(100% - var(--x2-size)) calc(100% - var(--x2-size));
+  background-repeat: no-repeat;
+  background-size: var(--x2-size);
+}
+#html {
+  background-image: url("/icon/html.png");
+}
+#css {
+  background-image: url("/icon/css.png");
+}
+#js {
+  background-image: url("/icon/js.png");
+}
+#preview {
+  background-image: url("/icon/preview.png");
+}
