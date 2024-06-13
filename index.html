@@ -1,60 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Skayeditor, write and share your code idea to faster" />
-    <meta name="keywords" content="braiidev,editor,code,developer,devs,html,css,online,write,share" />
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
     <meta property="og:title" content="Skay online-editor" />
-    <meta property="og.image" ,content="http://www.braiidev.com/skayeditor/icon/code.png">
-    <meta property="og.url" ,content="http://skayeditor.braiidev.com">
-    <meta property="og:description" ,content="Skayeditor, write and share your code idea to faster">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="icon/favicon.png" type="image/x-icon">
+    <meta property="og:image" ,content="" />
+    <meta property="og:url" ,content="" />
+    <meta property="og:description" ,content="Skayeditor" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon" />
+    <script type="module" src="assets/js/main.js" defer></script>
     <title>Skay online-editor</title>
-</head>
-
-<body>
-    <div id="navbar">
-        <div id="title"><input type="text" id="name" placeholder="Insert title" value=""></div>
-        <div id="menu">
-            <div id="menu-btn" class="container"></div>
-            <div id="modal">
-                <div class="container">
-                    <h2>Configuration</h2>
-                </div>
-                <div class="container">
-                    <h3>Light/Dark mode</h3>
-                    <label class="switch">
-                        <input checked id="dm" type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
-                </div>
-                <div class="container">
-                    <h3>Size</h3>
-                    <label for="size">
-                        <input type="number" value="8" name="size" id="size">
-                    </label>
-                </div>
-                <div class="container"><button id="reset">Reset</button></div>
-                <div class="container"><button id="copy">Copy url</button></div>
-                <!-- <div class="container"><button id="zip">Zip download</button></div> -->
-            </div>
-        </div>
+  </head>
+  <body>
+    <nav>
+      <header>
+        <h1><a href="#">Skayeditor</a></h1>
+      </header>
+      <ul class="menu" id="menu">
+        <li><input checked type="checkbox" name="html" /></li>
+        <li><input type="checkbox" name="css" /></li>
+        <li><input type="checkbox" name="js" /></li>
+        <li><input checked type="checkbox" name="preview" /></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div
+        class="code__container"
+        id="html"
+        style="--bg-img: url(../img/html.png)"
+      >
+        <textarea name="html"></textarea>
+      </div>
+      <div
+        class="code__container"
+        id="css"
+        style="--bg-img: url(../img/css.png)"
+      >
+        <textarea name="css"></textarea>
+      </div>
+      <div class="code__container" id="js" style="--bg-img: url(../img/js.png)">
+        <textarea name="js"></textarea>
+      </div>
+      <div
+        class="code__container"
+        id="preview"
+        style="--bg-img: url(../img/icon.png)"
+      >
+        <iframe frameborder="0"></iframe>
+      </div>
     </div>
-    <div id="app">
-        <div class="container"><textarea spellcheck="false" autocorrect="off" autocapitalize="off" translate="no"
-                id="html"></textarea></div>
-        <div class="container"><textarea spellcheck="false" autocorrect="off" autocapitalize="off" translate="no"
-                id="css"></textarea></div>
-        <div class="container"><textarea spellcheck="false" autocorrect="off" autocapitalize="off" translate="no"
-                id="js"></textarea></div>
-        <div class="container"><iframe id="preview"></iframe></div>
-    </div>
-    <script src="main.js" defer></script>
-    <script src="func.js" defer></script>
-</body>
-
+  </body>
 </html>
