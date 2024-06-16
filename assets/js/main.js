@@ -26,9 +26,7 @@ addEventListener("DOMContentLoaded", () => {
         $js.value +
         "</scri" +
         "pt>";
-      $iframe.contentWindow.document.open();
-      $iframe.contentWindow.document.write(rendering);
-      $iframe.contentWindow.document.close();
+      $iframe.setAttribute("srcdoc", rendering);
     })
   );
 });
