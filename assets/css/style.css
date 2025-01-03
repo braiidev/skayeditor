@@ -134,9 +134,16 @@ nav > ul.menu > li > :checked {
   background-size: 64px;
 }
 
+.CodeMirror{
+  height: 100% !important;
+}
+
+
+
 @media only screen and (max-width: 768px) {
   nav{
     flex-direction: column;
+    padding-bottom: 8px;
   }
   nav ul{
     width: 100% !important;

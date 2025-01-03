@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -12,9 +12,17 @@
     <meta property="og:description" ,content="Skayeditor" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon" />
-    <script type="module" src="assets/js/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/theme/darcula.min.css"
+    />
     <title>Skay online-editor</title>
   </head>
+
   <body>
     <nav>
       <header>
@@ -33,25 +41,34 @@
         id="html"
         style="--bg-img: url(../img/html.png)"
       >
-        <textarea name="html"></textarea>
+        <textarea autofocus id="html-e" name="html">&lt;!-- HTML --&gt;</textarea>
       </div>
       <div
         class="code__container"
         id="css"
         style="--bg-img: url(../img/css.png)"
       >
-        <textarea name="css"></textarea>
+        <textarea id="css-e" name="css"></textarea>
       </div>
       <div class="code__container" id="js" style="--bg-img: url(../img/js.png)">
-        <textarea name="js"></textarea>
+        <textarea id="js-e" name="js"></textarea>
       </div>
       <div
         class="code__container"
         id="preview"
         style="--bg-img: url(../img/icon.png)"
       >
-        <iframe frameborder="0"></iframe>
+        <iframe id="preview-e" frameborder="0"></iframe>
       </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/edit/closetag.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.0/addon/edit/closebrackets.min.js"></script>
+
+    <script type="module" src="assets/js/main.js" defer></script>
   </body>
 </html>
